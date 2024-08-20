@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply outline-none;
+}
+
+body {
+  @apply ~text-base/[1.2rem] h-[100svh] font-mono text-neutral-700;
+}
+
+pg-root,
+router-outlet {
+  @apply contents;
+}
