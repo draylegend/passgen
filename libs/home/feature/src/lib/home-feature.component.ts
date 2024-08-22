@@ -35,12 +35,11 @@ export default class HomeFeatureComponent {
       filter(() => this.form.valid),
       map(() => this.#concatSelectedAlphabets(this.form.value)),
     ),
+    { requireSync: true },
   );
 
-  protected async copy(password: HTMLButtonElement) {
-    if (password.textContent) {
-      await navigator.clipboard.writeText(password.textContent);
-    }
+  protected async copy() {
+    await navigator.clipboard.writeText(this.password());
   }
 
   #concatSelectedAlphabets({

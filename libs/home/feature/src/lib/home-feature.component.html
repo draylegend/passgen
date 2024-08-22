@@ -39,9 +39,8 @@
   @if (form.value.characterCount) {
     <p class="mt-4 basis-full">Click the box below to copy</p>
     <button
-      #generatedPasswordEl
       class="basis-full cursor-pointer break-all rounded-md border border-gray-300 p-2 text-center hover:bg-gray-100 active:bg-gray-200"
-      (click)="copy(generatedPasswordEl)"
+      (click)="copy()"
     >
       {{ password() }}
     </button>
